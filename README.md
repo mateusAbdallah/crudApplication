@@ -1,4 +1,5 @@
 Crud application with this data members: name, email and birthdate.
 
-- [ ] - initial html structure;
-- [ ] - style html;
+- [ * ] - create tables;
+- [ * ] - set the style;
+- [  ] - set the logic;
