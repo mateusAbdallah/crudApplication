@@ -22,6 +22,11 @@ h1 {
     padding: 1rem 0 ;   
 }
 
+h1:hover{
+    text-transform: uppercase;
+    color: blue;
+}
+
 table {
     width: 90%;
     margin: auto;
@@ -75,4 +80,28 @@ button {
 
 button:hover {
     background-color: aqua;
+}
+
+@media screen and (max-width: 768px){
+    table tr{
+        display: flex;
+        flex-direction: column;
+    }
+
+    table {
+        width: 50%;
+    }
+
+    .list {
+        display: flex;
+    }
+
+    thead tr th {
+        padding: .5rem;
+    }
+
+    tbody {
+        display: flex;
+        flex-wrap: nowrap;
+    }
 }
