@@ -8,8 +8,9 @@ function onFormSubmit(e){
         insertNewRecord(formData)
     }
     else{
-
+        updateRecord(formData);
     }
+    resetForm();
 }
 
 function readFormData(){
@@ -34,5 +35,32 @@ function insertNewRecord(data){
         cell3.innerHTML = data.dataDeNascimento;
 
     var cell4 = newRow.insertCell(3);
-        cell4.innerHTML = `<button>Edit</button> <button>Delete</button>`;
+        cell4.innerHTML = `<button onClick="onEdit(this)">Edit</button> <button onClick="onDelete(this)">Delete</button>`;
 }
+
+function onEdit(td){
+    selectecRow = td.parentElement.parentElement;
+    document.getElementById("name").value = selectecRow.cells[0].innerHTML;
+    document.getElementById("email").value = selectecRow.cells[1].innerHTML;
+    document.getElementById("dataDeNascimento").value = selectecRow.cells[2].innerHTML; 
+}
+
+function updateRecord(formData){
+    selectecRow.cells[0].innerHTML = formData.name;
+    selectecRow.cells[1].innerHTML = formData.email;
+    selectecRow.cells[2].innerHTML = formData.dataDeNascimento;
+}
+
+function onDelete(td){
+    if(confirm("Tem certeza que deseja deletar?")){
+        row = td.parentElement.parentElement;
+        document.getElementById("storeList").deleteRow(row.rowIndex);
+    }   
+    resetForm(); 
+}
+
+function resetForm(){
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("dataDeNascimento").value = "";
+} 
