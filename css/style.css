@@ -1,25 +1,26 @@
+
 * {
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-    background-color: ivory;
+    background-color: skyblue;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 body {
-    width: 85%;
+    width: 90%;
     margin: auto;
-    background-color: lightblue;
-    min-height: 610px;
-    box-shadow: 3px 3px 10px black;
+    background-color: aliceblue;
+    padding: 20px;
+    min-height: 400px;
+    min-width: 360px;
 }
 
 h1 {
-    text-align: center; 
-    padding: 1rem 0 ;   
+    text-align: center;
 }
 
 h1:hover{
@@ -27,81 +28,60 @@ h1:hover{
     color: blue;
 }
 
-table {
-    width: 90%;
-    margin: auto;
-    background-color: lightgray;
+fieldset {
+    margin: 10px;
 }
 
-table.list {
-    text-align: center;
-    width: 100%;
+legend {
+    background-color: slateblue;
+    color: snow;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+fieldset > div{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 2px;
+}
+
+fieldset > div > *{
+    flex: 1 1 200px;
+}
+
+input[type="submit"],input[type="reset"]{
+    width: 45%;
+    margin: 5px 2px;
+    background-color: steelblue !important;
+    color: snow;
+}
+
+input[type="submit"],input[type="reset"]:hover {
+    cursor: pointer;
+}
+
+table {
+    /* width: auto; */
+    margin: auto;
 }
 
 td {
-    border: 1px solid black;
-    text-align: left;
-    padding: 8px;
+    border: 1px solid gold;
+    padding: 5px;
 }
 
-tr:nth-child(even), table.list thead > tr {
-    background-color: azure;
-}
-
-input[type="text"], input[type="email"], input[type="date"] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid black;
-    border-radius: 4px;
-}
-
-input[type="submit"], input[type="reset"] {
-    padding: 6px;
-    margin: 15px 0;
-    display: inline-block;
-    border-radius: 15px;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover, input[type="reset"]:hover {
-    background-color: aqua;
+tbody {
+    text-align: center;
 }
 
 button {
-    padding: 6px;
-    margin: 15px 0;
-    display: inline-block;
     border: none;
-    border-radius: 15px;
+    border-radius: 2px;
+    padding: 2px;
     cursor: pointer;
+    background-color: steelblue;
 }
 
 button:hover {
     background-color: aqua;
-}
-
-@media screen and (max-width: 768px){
-    table tr{
-        display: flex;
-        flex-direction: column;
-    }
-
-    table {
-        width: 50%;
-    }
-
-    .list {
-        display: flex;
-    }
-
-    thead tr th {
-        padding: .5rem;
-    }
-
-    tbody {
-        display: flex;
-        flex-wrap: nowrap;
-    }
 }

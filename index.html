@@ -10,46 +10,45 @@
 </head>
 <body>
     <main>
-        <h1><em>CRUD Application</em></h1>
-        <table>
-            <tr>
-                <td>
-                    <form autocomplete="off" onsubmit="onFormSubmit()">
-                        <div>
-                            <label for="name">Name</label>
-                            <input type="text" name="name" id="name">
-                        </div>
-                        <div>
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email">
-                        </div>
-                        <div>
-                            <label for="dataDeNascimento">Data de nascimento</label>
-                            <input type="date" name="dataDeNascimento" id="dataDeNascimento">
-                        </div>
+        <h1>CRUD Application</h1>
+        <form action="" autocomplete="off" onsubmit="onFormSubmit()">
+            <fieldset>
+                <legend>Informações pessoais</legend>
+                <div>
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" id="name" placeholder="John Macuxis">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="email@email.com">
+                </div>
+                <div>
+                    <label for="dataDeNascimento">Data de nascimento</label>
+                    <input type="date" name="dataDeNascimento" id="dataDeNascimento">
+                </div>
 
-                        <div class="form_action button">
-                            <input type="submit" value="Submit">
-                            <input type="reset" value="Reset">
-                        </div>
-                    </form>
-                </td>    
-                <td>
-                    <table class="list" id="storeList">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Data de nascimento</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+                <div class="form_action button">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </div>
+            </fieldset>
+        </form>
 
-                        </tbody>
-                    </table>
-                </td>            
-            </tr>
-        </table>
+        <fieldset>
+            <legend>Dados coletados</legend>
+            <table class="list" id="storeList">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Data de nascimento</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </fieldset>
     </main>
     <script src="./js/script.js"></script>
 </body>
